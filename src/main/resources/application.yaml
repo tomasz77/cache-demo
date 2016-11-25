@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+cache:
+  memory:
+    cleanupDelayInMillis: 60000
