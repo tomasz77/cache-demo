@@ -8,7 +8,7 @@ Compiling requires ENV vars:
 JAVA_HOME - location of a JDK home dir
 
 ```sh
-mvnw clean package
+mvnw package
 ```
 
 ### Running
