@@ -10,14 +10,14 @@ import java.util.Map;
 @Configuration
 public class MemoryCacheConfiguration {
 
-	@Value("${cache.memory.maxCapacity:-1}")
-	private long maxCapacity;
+    @Value("${cache.memory.maxCapacity:-1}")
+    private long maxCapacity;
 
-	@Value("${cache.memory.cleanupDelayInMillis}")
-	private long cleanupDelayInMillis;
+    @Value("${cache.memory.cleanupDelayInMillis}")
+    private long cleanupDelayInMillis;
 
-	@Bean
-	public MemoryCache<String, Map<String, Object>> memoryCache() {
-		return new MemoryCache<>(cleanupDelayInMillis, maxCapacity);
-	}
+    @Bean
+    public MemoryCache<String, Map<String, Object>> memoryCache() {
+        return new MemoryCache<>(cleanupDelayInMillis, maxCapacity);
+    }
 }

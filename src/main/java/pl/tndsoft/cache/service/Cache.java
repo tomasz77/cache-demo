@@ -5,8 +5,8 @@ package pl.tndsoft.cache.service;
  */
 public interface Cache<K, V> {
 
-  void put(K key, V value, long timeToLiveInMillis);
+    void put(K key, V value, long timeToLiveInMillis);
 
-  V get(K key);
+    V get(K key);
 
 }

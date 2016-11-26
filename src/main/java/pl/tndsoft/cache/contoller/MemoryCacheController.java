@@ -14,18 +14,18 @@ import java.util.Map;
 @RequestMapping("/memory/cache")
 public class MemoryCacheController {
 
-  @Autowired
-  private MemoryCache<String, Map<String, Object>> memoryCache;
+    @Autowired
+    private MemoryCache<String, Map<String, Object>> memoryCache;
 
-  @GetMapping("/{key}")
-  public @ResponseBody Map<String, Object> get(@PathVariable("key") String key) {
-    return memoryCache.get(key);
-  }
+    @GetMapping("/{key}")
+    public @ResponseBody Map<String, Object> get(@PathVariable("key") String key) {
+        return memoryCache.get(key);
+    }
 
-  @PutMapping("/{key}")
-  public @ResponseBody void put(@PathVariable("key") String key, @RequestBody Map<String, Object> value,
-                  @RequestParam("timeToLiveInMillis") long timeToLiveInMillis) {
-    memoryCache.put(key, value, timeToLiveInMillis);
-  }
+    @PutMapping("/{key}")
+    public @ResponseBody void put(@PathVariable("key") String key, @RequestBody Map<String, Object> value,
+             @RequestParam("timeToLiveInMillis") long timeToLiveInMillis) {
+        memoryCache.put(key, value, timeToLiveInMillis);
+    }
 
 }
